@@ -6,7 +6,12 @@ class BoxDesignController < ApplicationController
   
   def claim
     @box = box_claim_scope.find(params[:box_id])
+    # todo: check here that there doesnt already exist one
+    # if it has_designer? already
+    # redirect page
+    # else set the below
     @box.designed_by = current_user
+    # and redirect to the box design page
     @box.save!
   end
 

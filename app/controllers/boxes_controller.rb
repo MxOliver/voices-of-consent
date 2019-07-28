@@ -61,6 +61,31 @@ class BoxesController < ApplicationController
     end
   end
 
+  # /boxes/already_claimed
+  def step_already_claimed
+  end
+
+  # /boxes/1/claim_design
+  def claim_design_step
+    # todo: check for has_designer?
+    # redirect to already claimed if true
+    # else redirect to design page
+  end
+
+  # /boxes/1/claim_assembly
+  def claim_assembly_step
+    # todo: check for has_assembler?
+    # redirect to already claimed if true
+    # else redirect to assembly page
+  end
+
+  # /boxes/1/claim_shipping
+  def claim_shipping_step
+    # todo: check for has_shipper?
+    # redirect to already claimed if true
+    # else redirect to shipping page
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_box
